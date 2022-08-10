@@ -94,6 +94,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LockPermitCancelInspections.cs" />
     <Compile Include="PluginBase.cs" />
     <Compile Include="PreOperationPermitCreate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
