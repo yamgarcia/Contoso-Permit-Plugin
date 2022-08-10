@@ -28,3 +28,33 @@ C:\Users\marcosg\source\DOTNET SOLUTIONS\ContosoPackageProject\obj\Debug\Contoso
 C:\Users\marcosg\source\DOTNET SOLUTIONS\ContosoPackageProject\obj\Debug\ContosoPackageProject.csproj.CopyComplete
 C:\Users\marcosg\source\DOTNET SOLUTIONS\ContosoPackageProject\obj\Debug\ContosoPackageProject.dll
 C:\Users\marcosg\source\DOTNET SOLUTIONS\ContosoPackageProject\obj\Debug\ContosoPackageProject.pdb
+C:\Users\marcosg\source\repos\ContosoPackageProject\bin\Debug\ContosoPackageProject.dll.config
+C:\Users\marcosg\source\repos\ContosoPackageProject\bin\Debug\ContosoPackageProject.dll
+C:\Users\marcosg\source\repos\ContosoPackageProject\bin\Debug\ContosoPackageProject.pdb
+C:\Users\marcosg\source\repos\ContosoPackageProject\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\marcosg\source\repos\ContosoPackageProject\bin\Debug\Microsoft.Crm.Sdk.Proxy.dll
+C:\Users\marcosg\source\repos\ContosoPackageProject\bin\Debug\Microsoft.Xrm.Sdk.dll
+C:\Users\marcosg\source\repos\ContosoPackageProject\bin\Debug\System.Buffers.dll
+C:\Users\marcosg\source\repos\ContosoPackageProject\bin\Debug\System.Memory.dll
+C:\Users\marcosg\source\repos\ContosoPackageProject\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\marcosg\source\repos\ContosoPackageProject\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\marcosg\source\repos\ContosoPackageProject\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\marcosg\source\repos\ContosoPackageProject\bin\Debug\System.Text.Json.dll
+C:\Users\marcosg\source\repos\ContosoPackageProject\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\marcosg\source\repos\ContosoPackageProject\bin\Debug\System.ValueTuple.dll
+C:\Users\marcosg\source\repos\ContosoPackageProject\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\marcosg\source\repos\ContosoPackageProject\bin\Debug\Microsoft.Crm.Sdk.Proxy.xml
+C:\Users\marcosg\source\repos\ContosoPackageProject\bin\Debug\Microsoft.Xrm.Sdk.xml
+C:\Users\marcosg\source\repos\ContosoPackageProject\bin\Debug\System.Buffers.xml
+C:\Users\marcosg\source\repos\ContosoPackageProject\bin\Debug\System.Memory.xml
+C:\Users\marcosg\source\repos\ContosoPackageProject\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\marcosg\source\repos\ContosoPackageProject\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\marcosg\source\repos\ContosoPackageProject\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\marcosg\source\repos\ContosoPackageProject\bin\Debug\System.Text.Json.xml
+C:\Users\marcosg\source\repos\ContosoPackageProject\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\marcosg\source\repos\ContosoPackageProject\bin\Debug\System.ValueTuple.xml
+C:\Users\marcosg\source\repos\ContosoPackageProject\obj\Debug\ContosoPackageProject.csproj.AssemblyReference.cache
+C:\Users\marcosg\source\repos\ContosoPackageProject\obj\Debug\ContosoPackageProject.csproj.CoreCompileInputs.cache
+C:\Users\marcosg\source\repos\ContosoPackageProject\obj\Debug\ContosoPackageProject.csproj.CopyComplete
+C:\Users\marcosg\source\repos\ContosoPackageProject\obj\Debug\ContosoPackageProject.dll
+C:\Users\marcosg\source\repos\ContosoPackageProject\obj\Debug\ContosoPackageProject.pdb
