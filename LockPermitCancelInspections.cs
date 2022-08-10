@@ -7,6 +7,8 @@ using Microsoft.Xrm.Sdk;
 using System.Text.RegularExpressions;
 using ContosoPackagePoject;
 using Microsoft.Xrm.Sdk.Query;
+using System.Web.UI.WebControls;
+using System.ServiceModel.Channels;
 
 namespace ContosoPackageProject
 {
@@ -64,6 +66,11 @@ namespace ContosoPackageProject
                 if (currentValue.Value == 1 || currentValue.Value == 463270000)
                 {
                     canceledInspectionsCount++;
+
+                    //Set the Status Reason selected value to Canceled.
+                    //Add the code below inside the if statement inside the foreach loop.
+                    //Make sure that 463270003 is the value for Canceled Status Reason in the Inspections Table.
+                    //If this differs, please update the value with actual value for Canceled Status Reason.
                     inspection["statuscode"] = new OptionSetValue(463270003);
 
                     //Update the Inspection and add Trace messages
@@ -72,12 +79,34 @@ namespace ContosoPackageProject
                     localcontext.Trace("Canceled inspection Id : " + inspection.Id);
                 }
 
-                //Set the Status Reason selected value to Canceled.
-                //Add the code below inside the if statement inside the foreach loop.
-                //Make sure that 463270003 is the value for Canceled Status Reason in the Inspections Table.
-                //If this differs, please update the value with actual value for Canceled Status Reason.
+                //Check if at least one Inspection was canceled
+                if (canceledInspectionsCount > 0)
+                {
+                    //Set the CanceledInspectionsCount output parameter
+                    localcontext.PluginExecutionContext.OutputParameters["CanceledInspectionsCount"] = canceledInspectionsCount + " Inspections were canceled";
+                }
 
+                //Check if Reason contains in the InputParameter
+                if (localcontext.PluginExecutionContext.InputParameters.ContainsKey("Reason"))
+                {
+                    //Build the Note record and add Trace Message
+                    localcontext.Trace("building a note reocord");
+                    Entity note = new Entity("annotation");
+                    note["subject"] = "Permit Locked";
+                    note["notetext"] = "Reason for locking this permit: " + localcontext.PluginExecutionContext.InputParameters["Reason"];
+                    note["objectid"] = permitEntityRef;
+                    note["objecttypecode"] = permitEntityRef.LogicalName;
 
+                    //Add Trace Message and create the Note record.
+                    localcontext.Trace("Creating a note reocord");
+                    var createdNoteId = localcontext.OrganizationService.Create(note);
+
+                    //Check if the Note record was created and add Trace Message
+                    if (createdNoteId != Guid.Empty)
+                    {
+                        localcontext.Trace("Note record was created");
+                    }
+                }
             }
 
         }
