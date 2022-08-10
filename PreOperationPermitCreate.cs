@@ -16,6 +16,7 @@ namespace ContosoPackageProject
         {
 
             base.ExecuteCDSPlugin(localcontext);
+
             //get the Target Table
             var permitEntity = localcontext.PluginExecutionContext.InputParameters["Target"] as Entity;
             //get the Build Site Table reference
@@ -30,6 +31,17 @@ namespace ContosoPackageProject
                 "alias='Count' aggregate='count' /><filter type='and' ><condition attribute='contoso_buildsite' " +
                 "uitype='contoso_buildsite' operator='eq' value='{" + buildSiteRef.Id + "}'/><condition " +
                 "attribute='statuscode' operator='eq' value='463270000'/></filter></entity></fetch>";
+            //Call RetrieveMultiple and add Trace Message
+            localcontext.Trace("Calling RetrieveMultiple for locked permits");
+            var response = localcontext.OrganizationService.RetrieveMultiple(new FetchExpression(fetchString));
+            //Get the locked Permit Count
+            int lockedPermitCount = (int)((AliasedValue)response.Entities[0]["Count"]).Value;
+            //Add Trace Message
+            localcontext.Trace("Locket Permit count : " + lockedPermitCount);
+            if (lockedPermitCount > 0)
+            {
+                throw new InvalidPluginExecutionException("Too many locked permits for build site");
+            }
 
         }
     }
